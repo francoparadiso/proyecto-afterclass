@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* ---------- NAV ---------- */
+.navegacion {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Selector combinado entre clase y etiqueta */
+.navegacion ul {
+    list-style: none;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    box-shadow: 0px 6px 10px 0px #0000002b;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.navegacion ul li {
+    margin: 0 .8rem;
+}
+
+.navegacion ul li a {
+    color: #d83636;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+h1 {
+    background-color: red;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ---------- SECCION 1 ---------- */
+.seccion1-index {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 400px);
+    grid-template-areas:
+        "imagen-grande"
+        "img-1"
+        "img-2"
+        "img-3"
+        "img-4"
+    ;
+    max-width: 760px; 
+    margin: auto;
+}
+
+.imagen-grande {
+    grid-area: imagen-grande;
+    background-image: url('../resources/960x0-1.webp');
+    background-size: cover;
+    color: white;
+}
+
+.img-1 {
+    grid-area: img-1;
+    background-image: url('../resources/Comida-ninos-alrededor-del-mundo-1.webp');
+    background-size: cover;
+    color: white;
+}
+
+.img-2 {
+    grid-area: img-2;
+    background-image: url('../resources/maxresdefault-30.webp');
+    background-size: cover;
+    color: white;
+}
+
+.img-3 {
+    grid-area: img-3;
+    background-image: url('../resources/estres.webp');
+    background-size: cover;
+    color: white;
+
+}
+
+.img-4 {
+    grid-area: img-4;
+    background-image: url('../resources/Tokio-Story.webp');
+    background-size: cover;
+    color: white;
+}
+
+
+
+.seccion1-index .imagen-grande img {
+    width: 300px;
+}
+
+.seccion1-index h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.seccion1-index img {
+    height: 175px;
+}
+
+article {
+    border: 1px solid black;
+    margin: 20px;
+    padding: 10px;
+    background-color: #ffffef;
+}
+
+
+/* Estrategia Responsive = Mobile First = MIN WIDTH*/
+
+@media (min-width: 400px) {
+    .navegacion ul {
+        width: 100vw;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 700px) {
+    .seccion1-index {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 200px);
+        grid-template-areas:
+            "imagen-grande imagen-grande img-1 img-2"
+            "imagen-grande imagen-grande img-3 img-4";
+    }
+}
